@@ -5,10 +5,7 @@
     "allowJs": false,
     "declaration": true,
     "sourceMap": false,
-    "rootDirs": [
-      "src",
-      "tests"
-    ],
+    "rootDirs": ["src", "tests"],
     "outDir": "lib",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
@@ -16,12 +13,7 @@
     "noUnusedParameters": true,
     "skipLibCheck": true,
     "pretty": true,
-    "lib": [
-      "ES2020",
-      "DOM"
-    ]
+    "lib": ["ES2020", "DOM"]
   },
-  "include": [
-    "./src/**/*"
-  ]
+  "include": ["./src/**/*"]
 }
