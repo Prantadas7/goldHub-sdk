@@ -1,5 +1,4 @@
 import { config } from "../config";
-import { AccessTokenResponse } from "./types";
 import { req } from "./utils";
 
 /**

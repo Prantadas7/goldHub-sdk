@@ -6,7 +6,5 @@ app.use(express.json());
 app.use(router)
 
 
-// app.listen(config.PORT, () => {
-//   console.log('=> Server listening on port', config.PORT);
-// })
+// app.listen()
 export default app;
