@@ -1,0 +1,22 @@
+{
+  "name": "vip-sdk",
+  "version": "1.0.0",
+  "description": "A simple sdk for pulling data from APIs.",
+  "main": "./src/index.ts",
+  "repository": "https://githu.com/Prantadas",
+  "author": "Pranta Das",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "node ./src/index.ts",
+    "dev": "nodemon ./src/index.ts"
+  },
+  "dependencies": {
+    "@types/node": "^20.9.4",
+    "axios": "^1.6.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1",
+    "typescript": "^5.3.2"
+  }
+}
