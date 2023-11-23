@@ -1,14 +1,21 @@
 {
-  "name": "vip-sdk",
+  "name": "gold-squad",
   "version": "1.0.0",
   "description": "A simple sdk for pulling data from APIs.",
   "main": "./dist/index.js",
   "repository": "https://github.com/Prantadas",
   "author": "Pranta Das",
+  "contributors": [
+    {
+      "name": "Yeasir Hossain",
+      "email": "yeasir06@gmail.com",
+      "github": "yeasir-hossain"
+    }
+  ],
   "license": "MIT",
-  "private": true,
   "files": [
-    "dist/"
+    "dist/",
+    "src/"
   ],
   "scripts": {
     "start": "node ./dist/index.js",
@@ -21,7 +28,8 @@
     "@types/node": "^20.9.4",
     "axios": "^1.6.2",
     "cors": "^2.8.5",
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "socket.io": "^4.7.2"
   },
   "devDependencies": {
     "dotenv": "^16.3.1",

@@ -1,6 +1,8 @@
-import { config } from "./config"
-import app from "./server/index"
+import dotenv from "dotenv"
+dotenv.config();
 import VipSquad from "./vipSquad/index"
+import { config } from "./config"
+import server from "./server";
 
 /**
  * Main function to initialize and start the application server.
@@ -18,7 +20,7 @@ const main = (): VipSquad => {
    * @throws {Error} - If an error occurs while starting the server.
    */
   const start = () => {
-    app.listen(config.PORT, () => {
+    server.listen(config.PORT, () => {
       console.log('=> Server listening on port', config.PORT);
     });
   };
@@ -34,5 +36,7 @@ const main = (): VipSquad => {
   // Returns the instance of the VipSquad class
   return vip;
 };
-
+(async function () {
+  const a = main();
+}())
 export default main;

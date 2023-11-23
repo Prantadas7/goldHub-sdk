@@ -1,7 +1,7 @@
 import { Config } from "./vipSquad/types";
 
 export const config: Config = {
-    PORT: process.env.PORT || 5000,
+    PORT: process.env.PORT || 4000,
     domain: "http://localhost:3000",
     origin: ["http://localhost:3000"],
     secret: "gold-squad",
@@ -13,7 +13,8 @@ export const config: Config = {
     delay: 10000,
     WHOP_API_KEY: "T3un9Vbh5JS57nOcO__AX7SpG44IWohhbv4YIwZeO_M",
     WHOP_CLIENT_SECRET: "Bv56oEFELMdQwXcFaMspCGhLhMj--U0l6EpVJmqZY5Q",
-    WHOP_CLIENT_ID: process.env.WHOP_CLIENT_ID as string,
+    WHOP_CLIENT_ID: "CT5K9SsDhXxWEn8l8sD2fzwbj3N_vY3Yp3zQn71iIEM",
     WHOP_COMPANY_ID: "biz_VdSGAOLB3qAPUa",
-    WHOP_REDIRECT_URL: process.env.WHOP_REDIRECT_URL as string
+    WHOP_REDIRECT_URL: "http://localhost:4000/callback",
+    NANSEN_API_KEY: "TGDR169WRtZZzoxiJJmCajuUVbGYDhgWaboYKxxb"
 };
