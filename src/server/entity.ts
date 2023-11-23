@@ -42,14 +42,3 @@ export const logout = () => async (req: Request, res: Response) => {
     res.status(500).send({ message: 'Internal Server Error' });
   }
 }
-
-
-// export const greedIDX = ({ vipSquad }: { vipSquad: VipSquad }) => async (req: Request, res: Response) => {
-//   try {
-//     const response = vipSquad.getGreedIdx();
-//     res.status(200).send(response);
-//   }
-//   catch (err) {
-//     console.log(err);
-//   }
-// }

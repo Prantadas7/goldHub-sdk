@@ -1,0 +1,16 @@
+# Ignore development files
+__tests__/
+*.spec.ts
+*.test.ts
+tsconfig.json
+
+# Ignore build artifacts
+dist/
+
+# Ignore version control files
+.git/
+.gitignore
+
+# Ignore npm-specific files
+.npmignore
+.npmrc

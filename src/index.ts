@@ -2,7 +2,6 @@ import { config } from "./config"
 import app from "./server/index"
 import VipSquad from "./vipSquad/index"
 
-// app ar vip squad
 const main = () => {
   const vip = new VipSquad()
   const start = () => {
@@ -16,4 +15,3 @@ const main = () => {
   }
   return vip;
 };
-main();

@@ -106,11 +106,11 @@ export default class VipSquad {
      * @returns {Promise<object>} - A Promise that resolves to the response data from the CryptoPanic API.
      * @throws {Error} - Throws an error if the API request fails.
      */
-    async getCryptoPanic(query: { currencies: string }): Promise<object> {
+    async getCryptoPanic({ currencies, page = 1 }: { currencies?: string, page?: number }): Promise<object> {
         try {
-            let fullUrl = config.cryptoPanicBaseUrl + `?auth_token=${config.cryptoPanicToken}`;
-            if (query.currencies) {
-                fullUrl += `&currencies=${query.currencies.toUpperCase()}`;
+            let fullUrl = config.cryptoPanicBaseUrl + `/?auth_token=${config.cryptoPanicToken}&page=${page}`;
+            if (currencies) {
+                fullUrl += `&currencies=${currencies.toUpperCase()}`;
             }
             const response = await req({
                 fullUrl
@@ -122,6 +122,4 @@ export default class VipSquad {
             throw error;
         }
     }
-
-
 };

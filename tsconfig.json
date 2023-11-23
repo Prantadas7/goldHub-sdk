@@ -1,12 +1,13 @@
 {
   "compilerOptions": {
     "target": "ES2020",
-    "module": "NodeNext",
+    "module": "commonjs",
+    "outDir": "./dist",
+    "rootDir": "./src",
     "allowJs": false,
     "declaration": true,
     "sourceMap": false,
     "rootDirs": ["src", "tests"],
-    "outDir": "lib",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
