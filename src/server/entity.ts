@@ -2,7 +2,15 @@ import { Request, Response } from 'express';
 import { config } from "../config";
 import { checkAccess, getAuthToken, getUser } from '../vipSquad/utils';
 
-export const callback = async (req: Request, res: Response) => {
+
+/**
+ * Handles the callback route for authentication.
+ *
+ * @param req - Express Request object
+ * @param res - Express Response object
+ * @returns {Promise<void>} - Promise representing the asynchronous operation
+ */
+export const callback = async (req: Request, res: Response): Promise<object | undefined> => {
   try {
     const code: string | undefined = req.query.code as string;
     if (!code) {
@@ -20,7 +28,14 @@ export const callback = async (req: Request, res: Response) => {
   }
 }
 
-export const me = async (req: Request, res: Response) => {
+/**
+ * Retrieves user information based on the provided authentication token.
+ *
+ * @param req - Express Request object
+ * @param res - Express Response object
+ * @returns {Promise<void>} - Promise representing the asynchronous operation
+ */
+export const me = async (req: Request, res: Response): Promise<object | undefined> => {
   try {
     const authToken = req.cookies[config.secret as string];
     const hasAccess = checkAccess(authToken);
@@ -33,7 +48,14 @@ export const me = async (req: Request, res: Response) => {
   }
 }
 
-export const logout = () => async (req: Request, res: Response) => {
+/**
+ * Handles the logout route by clearing the authentication cookie.
+ *
+ * @param req - Express Request object
+ * @param res - Express Response object
+ * @returns {Promise<void>} - Promise representing the asynchronous operation
+ */
+export const logout = async (req: Request, res: Response): Promise<void> => {
   try {
     res.clearCookie(req.cookies[config.secret as string]);
     res.status(200).send({ message: 'loggedout successfully' });
