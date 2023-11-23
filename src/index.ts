@@ -15,3 +15,5 @@ const main = () => {
   }
   return vip;
 };
+
+export default main;
